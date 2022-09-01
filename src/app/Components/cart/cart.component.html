@@ -1,0 +1,233 @@
+<div class="main">
+    <span class="home" routerLink="/dashboard/getallbooks">Home/MyCart</span>
+</div>
+<mat-expansion-panel class="panel1" hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            My Cart({{cartquantity}})
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div class="section">
+        <div fxLayout="row" fxLayoutAlign="center center">
+
+            <div fxLayout="column" fxLayoutGap="5px">
+                <div class="cartbook" fxLayout="row" fxLayout="start center" *ngFor="let book of bookSArray">
+                    <div>
+                        <div class="image" fxLayoutAlign="start center">
+                            <img class="bookImage" src="../../../assets/book1.png">
+                        </div>
+                    </div>
+
+                    <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+                        <div class="bookname">
+                            {{book.name}}
+                        </div>
+                        <div class="author">
+                            by {{book.author}}
+                        </div>
+                        <div class="price" fxLayout="row" fxLayoutGap="10px">
+                            <div class="discountprice">
+                                Rs.{{book.Price-70}}
+                            </div>
+                            <div class="originalprice">
+                                <del> Rs.{{book.Price}}</del>
+                            </div>
+                        </div>
+
+                        <div class="quantity" fxLayout="row" fxLayoutAlign="space-evenly center">
+                            <img class="circle" src="../../../assets/remove_circle_outline_black_24dp.svg">
+                            <span class="bookquantity">{{book.book_quantity}}</span>
+                            <img class="circle"(click)="increment()" src="../../../assets/add_circle_outline_black_24dp.svg">
+                            <span class="remove" (click)="removeCart(book)">Remove</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightdiv" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="80%">
+                <div class="location" fxLayoutAlign="center center">
+                    <mat-icon class="placeIcon">place</mat-icon>
+                    <span class="currentlocation">Use Current Location</span>
+                </div>
+                <div>
+                    <button mat-flat-button class="button" color="primary">Place Order
+
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-expansion-panel>
+
+<!-- ADDRESS DETAILS -->
+
+<mat-expansion-panel class="panel2" hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Address Details
+        </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <div class="customerdetails" fxLayout="row" fxLayoutAlign="space-between start">
+
+        <form [formGroup]="customerForm">
+
+            <div class="maindivofform" fxLayout="column" fxLayoutGap="2px">
+
+                <div class="details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="40%">
+                    <span class="heading">Customer Details</span>
+                </div>
+
+                <div class="details" fxLayout="row" fxLayoutGap="20px">
+                    <div class="city">
+                        <!-- <div class="details" fxLayout="column"> -->
+                        <div>
+                            <mat-label class="names">Address</mat-label>
+                        </div>
+                        <!-- <div class="address1"> -->
+                        <div>
+                            <mat-form-field appearance="outline" style="width: 210%; ">
+                                <input matInput type="text" formControlName="address" placeholder="">
+                                <mat-error>Enter address</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                    <div class="city">
+                        <div>
+                            <mat-label class="names">City/Town</mat-label>
+                        </div>
+
+                        <div>
+
+                            <mat-form-field appearance="outline">
+                                <input matInput type="text" formControlName="city" placeholder="">
+                                <mat-error>Enter city</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="state">
+                        <div>
+                            <mat-label class="names">State</mat-label>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="text" formControlName="state" placeholder="">
+                                <mat-error>Enter state</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="details" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div class="state">
+                        <div>
+                            <mat-label class="names">LandMark</mat-label>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="text" formControlName="landmark" placeholder="">
+                                <mat-error>Enter LandMark</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+
+                    <div class="state">
+                        <div>
+                            <mat-label class="names">Pincode</mat-label>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="text" formControlName="pincode" placeholder="">
+                                <mat-error>Enter Pincode</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="details" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div class="state">
+                        <div>
+                            <mat-label class="names">Address Type</mat-label>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="text" formControlName="address_type" placeholder="">
+                                <mat-error>Enter Address Type</mat-error>
+                            </mat-form-field> <span class="dot"></span> Home <span class="dot"></span> work
+                            <span class="dot"></span> Other
+                        </div>
+                    </div>
+                </div>
+                <!-- <div fxLayout="column" fxLayoutGap="7px">
+                    <span class="type">Type</span>
+                    <mat-radio-group aria-label="address_type">
+                        <mat-radio-button class="home" value="1">home</mat-radio-button>
+                        <mat-radio-button class="work" value="2">work</mat-radio-button>
+                        <mat-radio-button class="other" value="3">other</mat-radio-button>
+                    </mat-radio-group>
+                </div> -->
+            </div>
+
+            <div class="addressandcontinue" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="50%">
+                <div class="address" fxLayoutAlign="center center">
+                    <span>Add New Address</span>
+                </div>
+                <div>
+                    <button mat-flat-button class="continuebutton" (click)=" onUpdateaddress()"
+                        color="primary">Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</mat-expansion-panel>
+
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Order Summary
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div class="section">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div fxLayout="column" fxLayoutGap="20px">
+                <div class="cartbook" fxLayout="row" fxLayout="start center" *ngFor="let book of bookSArray">
+                    <div>
+                        <div class="image" fxLayoutAlign="start center">
+                            <img class="bookImage" src="../../../assets/book1.png">
+                        </div>
+                    </div>
+
+                    <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+                        <div class="bookname">
+                            {{book.name}}
+                        </div>
+                        <div class="author">
+                            by {{book.author}}
+                        </div>
+                        <div class="price" fxLayout="row" fxLayoutGap="10px">
+                            <div class="discountprice">
+                                Rs.{{book.Price-70}}
+                            </div>
+                            <div class="originalprice">
+                                <del> Rs.{{book.Price}}</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightdiv" fxLayout="column" fxLayoutAlign="space-between center">
+                <div>
+                    <button (click)=" ordersummary()" mat-flat-button class="checkoutbutton" 
+                        color="primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-expansion-panel>
+

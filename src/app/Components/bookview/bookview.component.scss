@@ -1,0 +1,184 @@
+.mainheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 94vh;
+}
+
+.header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+
+// .Books{
+//     padding: 2%;
+//     padding-left: 9%;
+// }
+.smallimages {
+    margin-left: 50px;
+    margin-top: 28%;
+}
+
+.small1 {
+    border: 1px solid rgb(165, 42, 42);
+    background-color: rgba(255, 192, 203, 0.562);
+    padding: 4px;
+}
+
+.img1 {
+    width: 40px;
+    height: 50px;
+    padding-top: 5px;
+}
+
+.small2 {
+    border: 1px solid gainsboro;
+    padding: 4px;
+
+}
+
+.img2 {
+    width: 40px;
+    height: 50px;
+    padding-top: 3px;
+}
+
+.maincontent {
+    width: 35%;
+    padding: 1%;
+    margin-top: 2%;
+    align-items: flex-start !important;
+}
+
+.image {
+    padding: 4%;
+    height: 415px;
+    width: 300px;
+    border: 3px solid gainsboro;
+    .mainimage{
+        width: 250px;
+    }
+}
+
+.btn {
+    background-color: brown;
+    color: white;
+    border: aliceblue;
+    border-radius: 1px;
+    padding: 6px;
+    margin-top: 7%;
+    width: 43%;
+    margin-left: 1%;
+    cursor: pointer;
+    
+}
+
+.btn2 {
+    background-color: black;
+    color: white;
+ 
+    border: aliceblue;
+    padding: 1px;
+    margin-top: -10%;
+    width: 45%;
+    margin-left: 55%;
+    cursor: pointer;
+}
+
+
+#fav-icons {
+    color: white;
+    font-size: 122%;
+    padding-top: 1px;
+}
+
+.bookdetails {
+    width: 55%;
+    // display: flex;
+    // flex-direction: row-reverse;
+}
+
+.bookname {
+    font-size: 26px;
+    width: inherit;
+    margin-top: 6%;
+    padding-left: 8%;
+}
+
+.author {
+    color: grey;
+    font-size: 14px;
+    padding-top: 3%;
+    padding-left: 8%;
+
+}
+
+.rating {
+    background: rgba(0, 100, 0, 0.87);
+    height: 20px;
+    width: 46px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 3%;
+    margin-left: 8%;
+}
+
+.Star {
+    height: 15px;
+    width: 15px;
+    font-size: 10px;
+    margin-top: -1px;
+}
+
+#count {
+    margin-left: 19%;
+    margin-top: -6%;
+    color: gray;
+}
+
+.quantity {
+    font-size: 15px;
+    margin-top: 23px;
+    margin-left: 55px;
+    color: grey;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.discountprice {
+    font-weight: 600;
+    margin-left: 8%;
+
+}
+
+.originalprice {
+    color: grey;
+    margin-left: 9%;
+}
+
+.para {
+    padding-left: 8%;
+    padding-top: 5%;
+}
+
+.booktitle {
+    font-size: medium;
+    color: gray;
+}
+
+.bookparagraph {
+    font-size: small;
+    color: gray;
+}
+
+.feedback {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 7%;
+
+}
+

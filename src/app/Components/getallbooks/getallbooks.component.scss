@@ -1,0 +1,172 @@
+.bookCount {
+    margin-left: 134px;
+    margin-top: 20px;
+}
+
+#book-count {
+    margin-top: -22px;
+    margin-left: 5%;
+    font-size: medium;
+    color: gainsboro;
+}
+.books {
+    font-size: 25px;
+}
+
+.sort {
+    margin-top: -24px;
+    margin-left: 61%;
+    border-radius: none;
+    outline: none;
+}
+
+.count {
+    margin-left: 10px;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.matselect {
+    color: brown;
+    height: 10px;
+    outline: none;
+}
+
+.bookcard {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 8%;
+    height: fit-content;
+    width: fit-content;
+    
+}
+
+.entirebook {
+    border: 1px solid gainsboro;
+    width: 250px;
+    height: fit-content;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bookimg {
+    width: 251px;
+    height: 210px;
+    background-color: gainsboro;
+    margin-top: -1px;
+}
+.details{
+    // margin-left: 20px;
+}
+.img1 {
+    width: 110px;
+    height: 140px;
+    margin-left: 70px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: medium;
+    margin-left: 13px;
+}
+
+#para {
+    margin-top: -24px;
+    font-size: small;
+    color: gray;
+    margin-left: 14px;
+}
+
+.rating {
+    font-size: 12px;
+    margin-top: -6px;
+    margin-left: 15px;
+    background: #388E3C;
+    color: white;
+    height: 15px;
+    width: 29px;
+    padding: 2px;
+}
+
+.Star {
+    height: 11px;
+    width: 11px;
+    font-size: 10px;
+    margin-top: -1px;
+   
+}
+
+
+#count {
+    margin-top: -8%;
+    margin-left: 19%;
+    font-size: small;
+    color: gainsboro;
+}
+
+.dicounted-price {
+    margin-top: 5px;
+    margin-left: 13px;
+    font-size: revert;
+}
+
+.actual-price {
+    margin-left: 13px;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.add-btn {
+    background-color: brown;
+    color: white;
+    border: aliceblue;
+    // border-radius: 10px;
+    // padding: 2px;
+    margin-left: 2%;
+    margin-bottom: 7px;
+    width: 43%;
+    cursor: pointer;
+    font-stretch: condensed;
+    font-size: small;
+}
+
+.btn2 {
+    background-color:black;
+    color: white;
+    border: aliceblue;
+    // border-radius: 10px;
+    // padding: 2px;
+    margin-left: 2%;
+    margin-bottom: 7px;
+    width: 43%;
+    cursor: pointer;
+    font-stretch: condensed;
+    font-size: small;
+    #fav-icons {
+        color: white;
+        font-size: 100%;
+        margin-top: 2px;
+        
+    
+    }
+}
+
+
+
+
+.booktitle {
+    width: 55%;
+}
+
+
+  .my-pagination ::ng-deep .ngx-pagination .current {
+    background: brown;
+    justify-content: center;
+  }
+  
+  .pagination {
+   
+    margin-right: 20px;
+  }

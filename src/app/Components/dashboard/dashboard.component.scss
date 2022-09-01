@@ -1,0 +1,93 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.tool {
+    background-color: brown;
+}
+
+#text {
+    color: white;
+}
+
+.img-Icon {
+    padding-left: 64%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.search {
+    margin-left: 15%;
+    width: 40%;
+    height: 54%;
+    padding: 0px;
+    padding-left: 5px;
+}
+
+.searchInput {
+    height: 50%;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: dimgrey;
+}
+
+.mat-card>:first-child,
+.mat-card-content>:first-child {
+    margin-top: 0px;
+    display: contents;
+    color: gray;
+
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    margin-left: 100px;
+    // padding-left: 2%;
+    
+    cursor: pointer;
+}
+.logoutbutton {
+    height: 50%;
+    width: 65%;
+    margin-left: 27px;
+    border-color: rgb(83, 80, 80);
+    color: rgb(245, 240, 240);
+    cursor: pointer;
+    background: rgb(148, 34, 34);
+}
+
+
+.wishlistIcon {
+    color: brown;
+    
+}
+
+.wishlistbutton {
+    margin-top: 1px;
+}
+.greet {
+    margin-left: 30px;
+}
+
+
+.cart {
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    margin-right: 130px;
+    
+    cursor: pointer;
+}

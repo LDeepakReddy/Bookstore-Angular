@@ -1,0 +1,59 @@
+<div>
+    <div class="bookCount">
+        <span class="books">Books <span class="count">({{booksquantity}} items)</span>
+            <p id="book-count"></p>
+        </span>
+    </div>
+    <div class="sort">
+        <mat-form-field appearance="outline">
+            <mat-label>Sort by relevance</mat-label>
+            <mat-select class="matselect">
+                <mat-option (click)="lowtohigh()" value="one">Price:Low to High</mat-option>
+                <mat-option (click)=" hightolow()" value="two">Price:High to Low</mat-option>
+                <mat-option (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="bookcard">,
+        <div class="entirebook" *ngFor="let Book of booksArray| searchpipe: searchBook |
+        paginate: { itemsPerPage: 8, 
+        currentPage: page,
+        totalItems:totalLength }">
+            <div class="bookimg">
+                <img class="img1" src="../../../assets/413UVUjPYFL._SL500_.jpg" (click)="bookview(Book)">
+
+            </div>
+            <div class="details">
+                <h2 class="title">{{Book.name}}</h2>
+                <p id="para">by {{Book.author}}</p>
+                <div class="rating" fxLayoutAlign="space-evenly center">
+                    4.5<img class="Star" src="../../../assets/grade_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                </div>
+
+                <p id="count">{{Book.quantity}}</p>
+
+                <div class="price-container">
+                    <div class="dicounted-price">
+
+                        <b>Rs.{{Book.price-70}}</b>
+                    </div>
+                    <div class="actual-price">
+                        Rs.{{Book.price}}
+
+                    </div>
+
+                </div>
+                <button mat-raised-button class="add-btn" (click)="AddToBag(Book)">ADD TO BAG</button>
+                <button mat-raised-button class="btn2" (click)="AddToWishlist(Book)">ADD TO WISHLIST</button>
+                <!-- <button class="btn2">
+                    <mat-icon id="fav-icons">favorite</mat-icon>WHISH LIST
+                </button> -->
+            </div>
+        </div>
+       
+    </div>
+    <div class="pagination" fxLayoutAlign="center center">
+        <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+    </div>
+   

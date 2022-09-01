@@ -1,0 +1,64 @@
+<div class="mainheader" fxLayout="column" fxLayoutAlign="center center">
+    <div style="width: 80%;">
+        <div style="width: 100%; margin-top: 2%;">
+            <span style="color:gray;" routerLink="/dashboard/getallbooks">Home/</span><span> Books({{book.quantity}})
+            </span>
+        </div>
+        <div class="header">
+            <div class="Books">
+                <div class="smallimages">
+                    <div class="small1">
+                        <img class="img1" src="../../../assets/413UVUjPYFL._SL500_.jpg" alt="">
+                    </div>
+                    <div class="small2">
+                        <img class="img2" src="../../../assets/small book.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="maincontent" fxLayout="column" fxLayoutAlign=" center">
+                <div class="image" fxLayoutAlign="center center">
+                    <img class="mainimage" src="../../../assets/413UVUjPYFL._SL500_.jpg" alt="bookImage">
+                </div>
+              
+                    <button class="btn" (click)="AddToBag(book)">ADD TO BAG</button>
+                    <button class="btn2">
+                        <mat-icon id="fav-icons">favorite</mat-icon>WHISH LIST
+                    </button>
+               
+                
+
+            </div>
+            <div class="bookdetails">
+                <div class="bookname">
+                    {{book.name}}
+                </div>
+                <div class="author">
+                    by {{book.author}}
+                </div>
+                <div class="rating" fxLayoutAlign="space-evenly center">
+                    4.5<img class="Star" src="../../../assets/grade_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                </div>
+                <p id="count">{{book.quantity}}</p>
+                <div class="price" fxLayout="row">
+                    <div class="discountprice">
+                        Rs.{{book.price-70}}
+                        <!-- {{book?.discountPrice}} -->
+                    </div>
+                    <div class="originalprice">
+                        <del>Rs.{{book.price}} </del>
+                    </div>
+                </div>
+                <div class="para">
+                    <span class="booktitle">Book Detail</span>
+                    <p class="bookparagraph">
+                        {{book.description}}
+                    </p>
+                </div>
+                <div class="feedback">
+                    <p>Customer Feedback</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
